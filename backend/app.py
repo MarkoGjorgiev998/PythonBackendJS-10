@@ -7,10 +7,7 @@ app = Flask(__name__)
 
 # Frontend-от работи на порт 5500, а ова API на порт 5000.
 # CORS дозволува frontend-от да праќа барања до backend-от.
-CORS(app, resources={r"/api/*": {"origins": [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
-]}})
+CORS(app)
 
 # Ова ни е „лажна база“: обична Python листа со речници.
 # Сите податоци се примерни, направени за час.
